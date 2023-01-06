@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace EcommerceApp.Infrastructure.Context
 {
-    public class ExcommerceAppDbContext : DbContext
+    public class EcommerceAppDbContext : DbContext
     {
-        public ExcommerceAppDbContext(DbContextOptions<ExcommerceAppDbContext> options) : base(options)
+        public EcommerceAppDbContext(DbContextOptions<EcommerceAppDbContext> options) : base(options)
         {
 
         }
@@ -24,5 +24,9 @@ namespace EcommerceApp.Infrastructure.Context
       
         public DbSet<Mall> Malls{get; set;}
         public DbSet<Employee> Employees{get; set;}
+
+        public DbSet<Product> Products { get; set; }
+
+        public DbSet<Category> Categories { get; set; }
     }
 }

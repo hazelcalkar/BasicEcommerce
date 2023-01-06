@@ -11,7 +11,7 @@ namespace EcommerceApp.Infrastructure.Repositories
 {
     public class EmployeeRepo : BaseRepo<Employee>, IEmployeeRepo
     {
-        public EmployeeRepo(ExcommerceAppDbContext excommerceAppDbContext) : base(excommerceAppDbContext)
+        public EmployeeRepo(EcommerceAppDbContext excommerceAppDbContext) : base(excommerceAppDbContext)
         {
         }
     }

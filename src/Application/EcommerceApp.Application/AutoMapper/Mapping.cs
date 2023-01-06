@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using EcommerceApp.Application.Models.DTOs;
+using EcommerceApp.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +17,8 @@ namespace EcommerceApp.Application.AutoMapper
 
             //hangi türden veri gelirse diğerine otomatik çevir.
             //Örnek: CreateMap<T,TResult>().ReverseMap();
+
+            CreateMap<Employee, AddManagerDTO>().ReverseMap();
         }
     }
 }

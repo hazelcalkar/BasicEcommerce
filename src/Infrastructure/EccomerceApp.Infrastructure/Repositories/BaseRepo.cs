@@ -17,9 +17,9 @@ namespace EcommerceApp.Infrastructure.Repositories
 {
     public class BaseRepo<T> : IBaseRepo<T> where T : class, IBaseEntity
     {
-        private readonly ExcommerceAppDbContext _excommerceAppDbContext;
+        private readonly EcommerceAppDbContext _excommerceAppDbContext;
         protected DbSet<T> _table;
-        public BaseRepo(ExcommerceAppDbContext excommerceAppDbContext)
+        public BaseRepo(EcommerceAppDbContext excommerceAppDbContext)
         {
             _excommerceAppDbContext = excommerceAppDbContext;
             _table = _excommerceAppDbContext.Set<T>();

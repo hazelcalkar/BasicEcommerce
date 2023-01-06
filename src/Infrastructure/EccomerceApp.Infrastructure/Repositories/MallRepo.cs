@@ -11,7 +11,7 @@ namespace EcommerceApp.Infrastructure.Repositories
 {
     public class MallRepo : BaseRepo<Mall>, IMallRepo
     {
-        public MallRepo(ExcommerceAppDbContext excommerceAppDbContext) : base(excommerceAppDbContext)
+        public MallRepo(EcommerceAppDbContext excommerceAppDbContext) : base(excommerceAppDbContext)
         {
         }
     }

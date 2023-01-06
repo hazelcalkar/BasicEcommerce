@@ -1,3 +1,4 @@
+using EcommerApp.MVC.Models.SeedDataModel;
 using EcommerceApp.Infrastructure.Context;
 using Microsoft.EntityFrameworkCore;
 
@@ -5,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddDbContext<ExcommerceAppDbContext>(_ =>
+builder.Services.AddDbContext<EcommerceAppDbContext>(_ =>
 {
     _.UseSqlServer(builder.Configuration.GetConnectionString("EcommerceConnString"));
 });
@@ -19,6 +20,7 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+SeedData.Seed(app);
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
